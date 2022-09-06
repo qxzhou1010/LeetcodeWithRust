@@ -36,10 +36,17 @@ impl Solution {
         return end as i32;
     }
 
-    // pub fn search_insert_2022_0905_02(nums: Vec<i32>, target: i32) -> i32 {
+    pub fn search_insert_2022_0905_02(nums: Vec<i32>, target: i32) -> i32 {
+        // return Result<usize, usize>
+        // if find the target, return Ok(usize)
+        // if not find, return Err(usize), the usize is the index of the target inserted 
+        match nums.binary_search(&target){
+            Ok(res) => res as i32,
+            Err(res) => res as i32
+        }
+        // maybe this is the simplest solution for this probelm
 
-
-    // }
+    }
 }
 
 fn main() {
